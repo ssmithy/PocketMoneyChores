@@ -1,5 +1,4 @@
 import Person from "../models/person";
-import template from './PersonReadOnly.html';
 
 class PersonReadOnly {
     person: Person;
@@ -8,4 +7,4 @@ class PersonReadOnly {
         this.person = params.person;
     }
 }
-export default { viewModel: PersonReadOnly, template: template };
+export default { viewModel: PersonReadOnly };

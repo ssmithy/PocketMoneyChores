@@ -9,7 +9,11 @@
     "outDir": "wwwroot/js",
     "moduleResolution": "node"
   },
-  "include": [
-    "scripts/**/*"
+  //"include": [
+  //  "scripts/**/*"
+  //],
+  "exclude": [
+    "node_modules",
+    "wwwroot"
   ]
 }
