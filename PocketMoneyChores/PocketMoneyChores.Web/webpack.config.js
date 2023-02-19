@@ -5,9 +5,9 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 
 module.exports = {
-  
+    devtool: "source-map",
     entry: {
-        main: path.resolve(__dirname, "./src/app.js"),
+        main: path.resolve(__dirname, "./src/app.ts"),
     },
     output: {
         filename: "app.bundle.js",
@@ -25,7 +25,14 @@ module.exports = {
                 test: /\.css/,
                 use: ["style-loader", "css-loader"]
             },
+            {
+                test: /\.ts?$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
+            }
         ],
-
+    },
+    resolve: {
+        extensions: [".ts", ".js"],
     }
 };

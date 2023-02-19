@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noEmitOnError": true,
     "removeComments": false,
     "sourceMap": true,
-    "target": "es6"
+    "target": "ES6"
   },
   "exclude": [
     "node_modules",

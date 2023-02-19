@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "name": "pocket-money-chores",
   "private": true,
-  "main": "app.js",
+  "main": "app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",

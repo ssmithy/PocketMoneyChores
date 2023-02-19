@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="src\app.js" />
+    <None Remove="src\app.ts" />
+    <None Remove="src\component.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\component.ts" />
   </ItemGroup>
 
 	<!--
