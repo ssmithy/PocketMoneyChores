@@ -16,6 +16,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "Smithy Output",
+            template: "index.html"
         }),
         new CleanWebpackPlugin()
     ],

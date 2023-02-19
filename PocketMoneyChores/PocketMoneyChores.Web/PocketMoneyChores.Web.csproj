@@ -1,24 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="src\app.ts" />
-    <None Remove="src\component.ts" />
-  </ItemGroup>
+	<PropertyGroup>
+		<DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="src\app.ts" />
+		<None Remove="src\component.ts" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <TypeScriptCompile Include="src\app.ts" />
-    <TypeScriptCompile Include="src\component.ts" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="wwwroot\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<TypeScriptCompile Include="src\app.ts" />
+		<TypeScriptCompile Include="src\component.ts" />
+	</ItemGroup>
 
 	<!--
       1. Install npm packages
@@ -46,7 +50,7 @@
       2. Run npm run build before building the .NET project.
       MSBuild runs NpmInstall before this task because of the DependsOnTargets attribute.
    -->
-	<Target Name="NpmRunBuild" DependsOnTargets="NpmInstall" BeforeTargets="BeforeBuild">
+	<Target Name="NpmRunBuild" DependsOnTargets="NpmInstall" BeforeTargets="Build">
 		<Exec Command="npm run dev" />
 	</Target>
 
