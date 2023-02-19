@@ -1,8 +1,11 @@
 ﻿const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
-module.exports = {
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
+
+module.exports = {
+  
     entry: {
         main: path.resolve(__dirname, "./src/app.js"),
     },
@@ -14,5 +17,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Smithy Output",
         }),
+        new CleanWebpackPlugin()
     ],
+    module: {
+        rules: [
+            {
+                test: /\.css/,
+                use: ["style-loader", "css-loader"]
+            },
+        ],
+
+    }
 };

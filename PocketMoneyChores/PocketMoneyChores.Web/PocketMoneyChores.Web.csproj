@@ -10,8 +10,4 @@
     <Content Include="src\app.js" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
 </Project>
