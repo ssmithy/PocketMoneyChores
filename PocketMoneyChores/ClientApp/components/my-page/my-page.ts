@@ -11,7 +11,7 @@ class MyPageViewModel {
     public third: KnockoutComputed<string> = ko.pureComputed(
         () => this.first() + " " + this.second());
 
-    public setToSomethingElse() {
+    public save() {
 
         let test = ko.toJSON({ First: this.first, Second: this.second });
 
