@@ -26,6 +26,19 @@ namespace PocketMoneyChores.Controllers
             });
         }
 
+        [HttpPost("[action]")]
+        public IActionResult SaveIt([FromBody]FirstSecondModel model)
+        {
+            return BadRequest();
+
+            return Json(string.Empty);
+        }
+
+        public class FirstSecondModel
+        {
+            public string First { get; set; }
+            public string Second { get; set; }
+        }
         public class WeatherForecast
         {
             public string DateFormatted { get; set; }

@@ -1,16 +1,31 @@
 ﻿import * as ko from 'knockout';
+import * as jquery from 'jquery';
+
+
 
 class MyPageViewModel {
 
-    public first = ko.observable("Hello,");
+    public first = ko.observable("Hello");
     public second = ko.observable("World!");
 
     public third: KnockoutComputed<string> = ko.pureComputed(
         () => this.first() + " " + this.second());
 
     public setToSomethingElse() {
-        this.first("TEsting");
-        this.second("1,2 ,3");
+
+        let test = ko.toJSON({ First: this.first, Second: this.second });
+
+
+        jquery.ajax({
+            type: 'POST',
+            url: '/api/SampleData/SaveIt/',
+            data: test,
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            success: () => { alert("worked!"); },
+            error: function () { alert('Error'); }
+        });  
+
     }
 }
 
