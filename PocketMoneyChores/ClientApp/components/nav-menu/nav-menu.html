@@ -27,6 +27,11 @@
                         <span class='glyphicon glyphicon-th-list'></span> Fetch data
                     </a>
                 </li>
+                <li>
+                    <a data-bind='attr: { href: router.link("/my-page") }, css: { active: route().page === "my-page" }'>
+                        <span class='glyphicon glyphicon-user'></span> My Page
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
