@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -29,13 +30,13 @@ namespace PocketMoneyChores.Controllers
         [HttpPost("[action]")]
         public IActionResult SaveIt([FromBody]FirstSecondModel model)
         {
-            return BadRequest();
-
             return Json(string.Empty);
         }
 
         public class FirstSecondModel
         {
+            [StringLength(10)]
+            
             public string First { get; set; }
             public string Second { get; set; }
         }

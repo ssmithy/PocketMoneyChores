@@ -1,8 +1,6 @@
 ﻿import * as ko from 'knockout';
 import * as jquery from 'jquery';
 
-
-
 class MyPageViewModel {
 
     public first = ko.observable("Hello");
@@ -13,13 +11,12 @@ class MyPageViewModel {
 
     public save() {
 
-        let test = ko.toJSON({ First: this.first, Second: this.second });
-
+        let formData = ko.toJSON({ First: this.first, Second: this.second });
 
         jquery.ajax({
             type: 'POST',
             url: '/api/SampleData/SaveIt/',
-            data: test,
+            data: formData,
             contentType: "application/json; charset=utf-8",
             dataType: 'json',
             success: () => { alert("worked!"); },
