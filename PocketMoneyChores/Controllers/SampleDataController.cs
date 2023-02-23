@@ -25,7 +25,7 @@ namespace PocketMoneyChores.Controllers
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
-        }
+        } 
 
         [HttpPost("[action]")]
         public IActionResult SaveIt([FromBody]FirstSecondModel model)
