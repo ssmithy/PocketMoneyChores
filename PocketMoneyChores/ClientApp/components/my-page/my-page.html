@@ -1,13 +1,16 @@
-﻿<h1>Hello, my page!</h1>
+﻿<h1>Hello, World!</h1>
 
-<p>This is my component.</p>
+<p>This is a knockout component.</p>
 
-<p>Third: <strong data-bind='text: third'></strong></p>
+<p>Name: <strong data-bind='text: third'></strong></p>
 
-
+<hr />
+<p>First Name:</p>
 <input data-bind="textInput: first"
        type="text" id="first" class="form-control">
+<br />
+<p>Surname: </p>
 <input data-bind="textInput: second"
        type="text" id="second" class="form-control">
-
-<button data-bind='click: save'>Change</button>
+<br />
+<button data-bind='click: save'>Save</button>

@@ -8,9 +8,9 @@ class MyPageViewModel {
 
     public third: KnockoutComputed<string> = ko.pureComputed(
         () => this.first() + " " + this.second());
-
+    
     public save() {
-
+        
         let formData = ko.toJSON({ First: this.first, Second: this.second });
 
         jquery.ajax({
